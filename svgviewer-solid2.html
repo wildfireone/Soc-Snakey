@@ -44,7 +44,7 @@
       .attr("height", "100%")
 
 
-    loadSvg2("svgs/data3");
+    loadSvg2("svgs/viz3");
 
     function loadSvg2(graph) {
       $("#graph").empty();
@@ -137,10 +137,10 @@
     var nodeClick = function() {
 
 
-      $("g.node").mouseover(function() {
-        //console.log($(this));
+      $("rect").mouseover(function() {
+        console.log($(this));
 
-        var parenttag =  $(this).find("text")[0].innerHTML
+        var parenttag =  $(this)["title"].innerHTML
         parenttag = parenttag.hashCode()
         parenttag = "."+parenttag
 

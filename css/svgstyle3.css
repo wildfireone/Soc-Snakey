@@ -43,7 +43,7 @@ rect {
     pointer-events: visiblePainted !important;
   }
 
-  path.link {
+  path {
     visibility:hidden !important;
     stroke-opacity:0.1 !important;
     stroke-dasharray: 0 !important;

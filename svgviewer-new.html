@@ -140,7 +140,7 @@
         //console.log("multi-operators " + opersOn);
       });
 
-    loadSvg2("svgs/id-size");
+    loadSvg2("svgs/viz6");
 
     function loadSvg2(graph) {
       $("#graph").empty();
@@ -216,17 +216,17 @@
 
 
 
-$("g.node").mouseout(function(n) {
+$(".node").mouseout(function(n) {
 rmAllSelect();
 $('#nodetype').text('')
 $('#nodename').text('');
 
 });
-      $("g.node").mouseover(function(n) {
-        //console.log($(this));
+      $(".node").mouseover(function(n) {
+        console.log($(this));
 
 
-        var innertext = $(this).find("text")[0].innerHTML
+        var innertext = $(this).attr("id");
         var group = $(this).attr('group');
         if (group == 'companyName') {
           $('#nodetype').text('Operator')
@@ -281,6 +281,7 @@ $('#nodename').text('');
     });
 
     function addSelect(selector) {
+      console.log(selector);
       $(selector).each(function(index, value) {
         //console.log(value);
         var currentclasses = $(value).attr("class").split(' ');
